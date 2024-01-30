@@ -46,7 +46,7 @@ h1 {letter-spacing: 6px}
       <a href="#" class="w3-bar-item w3-button">Home</a>
       <a href="#" class="w3-bar-item w3-button w3-light-grey">Portfolio</a>
       <a href="#" class="w3-bar-item w3-button">Contact</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small">GIS Arts</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small">GIS Art</a>
     </div>
   </div>
 </header>
@@ -57,13 +57,14 @@ h1 {letter-spacing: 6px}
 
 
     <div id='map' style='width: 1000px; height: 800px;'></div>
-        <div id="centered">centre</div>
+
     <!-- feel free to play around with the map size by changing pixels-->
 
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoibm9ydG9uMjciLCJhIjoiY2xoam9hNHI5MGpuMjNscWtlcTF2dTN3dyJ9.xx0qCx-woV7mYFkrMNQmiA';
         const map = new mapboxgl.Map({
             container: 'map',
+            text-align: 'center';
             style: 'mapbox://styles/norton27/clnl3x5ph00lu01q1emfi4hjx', //insert style here, here are some pre-set options https://docs.mapbox.com/api/maps/styles/
             center: [-123.21224931916706, 49.26029799208978,], //insert coordinates here
             zoom: 12 // insert zoom level here e.g. 15
