@@ -11,68 +11,110 @@
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
-  
+
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-  <link href="./assets/favicon.ico" rel="icon">
+  <!-- <link href="./assets/favicon.ico" rel="icon"> -->
 
-  <title>Blog Home</title>  
+  <title>Blog Home</title>
 
-<link href="./main.3f6952e4.css" rel="stylesheet"></head>
+  <link href="./main.3f6952e4.css" rel="stylesheet">
+</head>
 
 <style>
-
   #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
 
+  .video-background,
+  .video-foreground,
+  .video-foreground iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* so clicks pass through */
+  }
+
+  .video-background {
+    overflow: hidden;
+    z-index: -1;
+    /* behind your content */
+    position: fixed;
+    /* or absolute depending on your layout */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+.text-content, 
+.text-content h1, 
+.text-content h2 {
+  color: #ffff5c;
+}
 </style>
 
 
 <body class="minimal">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-<!-- Add your content of header -->
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-inverse">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
+  <!-- Add your content of header -->
+  <header>
+    <nav class="navbar  navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+          aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
 
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="">01 : Home</a></li>
-          <li><a href="./works.html" title="">02 : Works</a></li>
-          <li><a href="./about.html" title="">03 : About me</a></li>
-          <li><a href="./contact.html" title="">04 : Contact</a></li>
-          <li><a href="./photos.html" title="">05 : Photo/Art Gallery</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav ">
+            <li><a href="./index.html" title="">01 : Home</a></li>
+            <li><a href="./works.html" title="">02 : Works</a></li>
+            <li><a href="./about.html" title="">03 : About me</a></li>
+            <li><a href="./contact.html" title="">04 : Contact</a></li>
+            <li><a href="./photos.html" title="">05 : Photo/Art Gallery</a></li>
+          </ul>
 
-      </div> 
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- Add your site or app content here -->
+
+  <div class="hero-full-container background-image-container white-text-container">
+
+    <!-- YouTube background -->
+    <div class="video-background">
+      <div class="video-foreground">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/yu-1CCdNCRY?autoplay=1&mute=1&loop=1&playlist=yu-1CCdNCRY&controls=0&modestbranding=1&rel=0"
+          frameborder="0" 
+          allow="autoplay;fullscreen"
+          allowfullscreen></iframe>
+      </div>
     </div>
-  </nav>
-</header>
-<!-- Add your site or app content here -->
- <video controls loop id="myVideo">
-  <source src="Landslide.mp4" type="video.mp4">
 
- </video>
-    <div class="container"> 
+    <div class="container">
       <div class="row">
         <div class="col-xs-12">
           <div class="hero-full-wrapper">
             <div class="text-content">
               <h2>Ciara Norton - Spatial Data Scientist</h2>
-                <h1>
+              <h1>
                 <span id="typed-strings">
                   <span>Welcome to Ciara's Virtual Office</span>
                   <span>This website showcases my research projects and work experience</span>
@@ -84,16 +126,18 @@
           </div>
         </div>
       </div>
+    </div>
   </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     type();
-     movingBackgroundImage();
-  });
-</script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      type();
+      movingBackgroundImage();
+    });
+  </script>
 
 
-<script type="text/javascript" src="./main.70a66962.js"></script></body>
+  <script type="text/javascript" src="./main.70a66962.js"></script>
+</body>
 
 </html>
