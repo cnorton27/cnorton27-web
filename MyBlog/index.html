@@ -19,6 +19,19 @@
 
 <link href="./main.3f6952e4.css" rel="stylesheet"></head>
 
+<style>
+
+  #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+</style>
+
+
 <body class="minimal">
 <div id="site-border-left"></div>
 <div id="site-border-right"></div>
@@ -49,7 +62,10 @@
   </nav>
 </header>
 <!-- Add your site or app content here -->
-  <div class="hero-full-container background-image-container white-text-container" style="background-image: url('QHI_NorthSlope.JPG')">
+ <video controls loop id="myVideo">
+  <source src="Landslide.mp4" type="video.mp4">
+
+ </video>
     <div class="container"> 
       <div class="row">
         <div class="col-xs-12">
@@ -68,7 +84,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 
 <script>
