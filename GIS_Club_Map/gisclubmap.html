@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Map of GIS Club</title>
+    <title>Learning HTML with Emily</title>
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
@@ -55,54 +55,6 @@
 
         map.addControl(new mapboxgl.NavigationControl());
 
-
-        const geojson = {
-            type: 'FeatureCollection',
-            features: [
-                {
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [-123.20837651469633, 49.26388219880599] //insert coordinates here
-                    },
-                    properties: {
-                        title: 'Bombay Masala', // what's your marker title? e.g. University Golf Course
-                        description: 'Point Grey' // where is your marker? e.g. Point Grey
-                    }
-                },
-                {
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [-123.25600176717671, 49.265920324279676] //coordinates
-                    },
-                    properties: {
-                        title: 'UBC GIS Club', // whats your marker title?
-                        description: 'the best club ever' // where is it?
-                    }
-                }
-            ]
-        };
-
-        // add markers to map
-        for (const feature of geojson.features) {
-            // create a HTML element for each feavture
-            const el = document.createElement('div');
-            el.className = 'marker';
-
-
-            // make a marker for each feature and add to the map
-            new mapboxgl.Marker(el)
-                .setLngLat(feature.geometry.coordinates)
-                .setPopup(
-                    new mapboxgl.Popup({ offset: 25 }) // add popups
-                        .setHTML(
-                            `<h3>${feature.properties.title}</h3>
-<p>${feature.properties.description}</p>`
-                        )
-                )
-                .addTo(map)
-        }
         // Add a scale control to the map
         map.addControl(new mapboxgl.ScaleControl());
 
